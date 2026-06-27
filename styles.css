@@ -1,0 +1,185 @@
+/* Compadres Barbershop — shared styles */
+:root{
+  --ink:#141210;
+  --ink-2:#1f1b17;
+  --cream:#f5efe2;
+  --gold:#d4a02a;
+  --gold-2:#b9851a;
+  --red:#a3271f;
+  --green:#1f6b4f;
+  --muted:#a89f8e;
+  --line:rgba(245,239,226,.14);
+  --maxw:1120px;
+  --font-head:"Oswald","Arial Narrow",Helvetica,sans-serif;
+  --font-body:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-body);
+  background:var(--ink);
+  color:var(--cream);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+h1,h2,h3,.brand{font-family:var(--font-head);font-weight:700;letter-spacing:.5px;line-height:1.05}
+.eyebrow{font-family:var(--font-head);text-transform:uppercase;letter-spacing:3px;font-size:.8rem;color:var(--gold)}
+
+/* refined gold top accent */
+.serape{height:3px;background:linear-gradient(90deg,transparent,var(--gold-2) 18%,var(--gold) 50%,var(--gold-2) 82%,transparent)}
+
+/* header */
+header.site{position:sticky;top:0;z-index:50;background:rgba(20,18,16,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 22px;max-width:var(--maxw);margin:0 auto}
+.logo{display:flex;align-items:center;gap:12px}
+.logo .mark{width:44px;height:44px;border-radius:50%;border:2px solid var(--gold);display:grid;place-items:center;overflow:hidden;background:#000}
+.logo .mark img{width:100%;height:100%;object-fit:cover;display:block}
+.logo .mark.noimg::after{content:"C";font-family:var(--font-head);font-weight:700;color:var(--gold);font-size:1.2rem}
+
+/* hero logo badge */
+.hero-badge{width:130px;height:130px;border-radius:50%;border:3px solid var(--gold);object-fit:cover;display:block;margin:0 auto 24px;background:#000;box-shadow:0 10px 34px rgba(0,0,0,.55)}
+
+/* instagram feed */
+.ig-feed{display:flex;flex-wrap:wrap;gap:18px;justify-content:center}
+.ig-feed .instagram-media{margin:0 !important;min-width:300px !important;max-width:328px !important;width:100% !important}
+.logo .name{font-family:var(--font-head);font-size:1.25rem;text-transform:uppercase;letter-spacing:1.5px}
+.logo .name span{color:var(--gold)}
+nav.links{display:flex;align-items:center;gap:26px}
+nav.links a{font-family:var(--font-head);text-transform:uppercase;letter-spacing:1.5px;font-size:.92rem;color:var(--cream);opacity:.85;transition:.2s}
+nav.links a:hover,nav.links a.active{opacity:1;color:var(--gold)}
+.btn{display:inline-block;font-family:var(--font-head);text-transform:uppercase;letter-spacing:1.5px;font-weight:600;padding:12px 22px;border-radius:4px;transition:.2s;cursor:pointer;font-size:.92rem}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-gold:hover{background:var(--gold-2)}
+.btn-ghost{border:1.5px solid var(--gold);color:var(--gold)}
+.btn-ghost:hover{background:var(--gold);color:var(--ink)}
+.nav-toggle{display:none;background:none;border:0;color:var(--cream);font-size:1.6rem;cursor:pointer}
+
+/* hero */
+.hero{position:relative;text-align:center;padding:120px 22px 110px;background:
+  radial-gradient(120% 90% at 50% 0%,rgba(212,160,42,.12),transparent 60%),
+  linear-gradient(180deg,#191510,#0f0d0b);
+  border-bottom:1px solid var(--line);overflow:hidden}
+.hero::before,.hero::after{content:"";position:absolute;font-family:var(--font-head);font-size:14rem;color:rgba(245,239,226,.03);top:50%;transform:translateY(-50%)}
+.hero::before{content:"✂";left:4%}
+.hero::after{content:"💈";right:4%;font-size:9rem}
+.hero h1{font-size:clamp(2.6rem,7vw,5rem);text-transform:uppercase}
+.hero h1 em{color:var(--gold);font-style:normal}
+.hero p.lead{max-width:620px;margin:18px auto 28px;color:#e7dfce;font-size:1.12rem}
+.hero .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.stars{color:var(--gold);letter-spacing:2px}
+.rating{margin-top:26px;font-size:.95rem;color:var(--muted)}
+.rating strong{color:var(--cream)}
+
+/* sections */
+section{padding:74px 0}
+.section-head{text-align:center;max-width:640px;margin:0 auto 46px}
+.section-head h2{font-size:clamp(2rem,4.5vw,2.9rem);text-transform:uppercase;margin-top:8px}
+.section-head p{color:var(--muted);margin-top:12px}
+.alt{background:var(--ink-2)}
+
+/* feature grid */
+.grid{display:grid;gap:22px}
+.cols-3{grid-template-columns:repeat(3,1fr)}
+.cols-2{grid-template-columns:repeat(2,1fr)}
+.card{background:#211c17;border:1px solid var(--line);border-radius:8px;padding:28px}
+.card h3{font-size:1.3rem;text-transform:uppercase;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.96rem}
+.card .icon{font-size:1.8rem;margin-bottom:14px}
+
+/* services / price list */
+.pricelist{max-width:760px;margin:0 auto;display:grid;gap:6px}
+.price-row{display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding:20px 4px;border-bottom:1px dashed var(--line)}
+.price-row .info h3{font-size:1.25rem;text-transform:uppercase}
+.price-row .info span{display:block;color:var(--muted);font-size:.9rem;margin-top:3px}
+.price-row .dots{flex:1;border-bottom:1px dotted rgba(245,239,226,.25);margin:0 4px 6px;align-self:flex-end}
+.price-row .amt{font-family:var(--font-head);font-size:1.5rem;color:var(--gold);white-space:nowrap}
+.note{text-align:center;color:var(--muted);margin-top:30px;font-size:.95rem}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gallery .tile{aspect-ratio:1/1;border-radius:8px;border:1px solid var(--line);display:grid;place-items:center;font-family:var(--font-head);text-transform:uppercase;letter-spacing:2px;color:rgba(245,239,226,.55);font-size:.85rem;text-align:center;padding:14px;
+  background:linear-gradient(135deg,#241e18,#17130f)}
+.gallery .tile .em{font-size:2.4rem;color:var(--gold);margin-bottom:8px}
+
+/* barbers */
+.barber{text-align:center}
+.barber .avatar{width:120px;height:120px;border-radius:50%;margin:0 auto 16px;border:3px solid var(--gold);display:grid;place-items:center;font-family:var(--font-head);font-size:2.4rem;color:var(--gold);background:#211c17}
+.barber h3{font-size:1.35rem;text-transform:uppercase}
+.barber .role{color:var(--gold);font-family:var(--font-head);letter-spacing:2px;text-transform:uppercase;font-size:.85rem;margin-top:4px}
+.barber p{color:var(--muted);font-size:.95rem;margin-top:10px}
+
+/* split / info */
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.split h2{font-size:clamp(1.9rem,4vw,2.7rem);text-transform:uppercase;margin:8px 0 16px}
+.split p{color:#d8cfbd;margin-bottom:14px}
+.hours{list-style:none;max-width:420px}
+.hours li{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--line);font-size:1rem}
+.hours li span:first-child{font-family:var(--font-head);text-transform:uppercase;letter-spacing:1px}
+.hours li.closed span:last-child{color:var(--muted);letter-spacing:1px}
+.hours li.today{color:var(--gold)}
+
+.infobox{background:#211c17;border:1px solid var(--line);border-radius:8px;padding:30px}
+.infobox h3{text-transform:uppercase;color:var(--gold);font-size:1.05rem;letter-spacing:1.5px;margin-bottom:6px}
+.infobox p{margin-bottom:18px;color:#e7dfce}
+.infobox a{color:var(--cream);border-bottom:1px solid var(--gold)}
+
+.map{border-radius:8px;overflow:hidden;border:1px solid var(--line);min-height:320px;width:100%}
+.map iframe{width:100%;height:100%;min-height:320px;border:0;filter:grayscale(.3) contrast(1.05)}
+
+/* cta band */
+.cta-band{background:linear-gradient(90deg,#221c16,#171310);text-align:center;padding:70px 22px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cta-band h2{font-size:clamp(2rem,5vw,3rem);text-transform:uppercase}
+.cta-band p{color:var(--muted);margin:12px 0 26px}
+
+/* footer */
+footer.site{background:#0f0d0b;padding:48px 22px 30px;border-top:1px solid var(--line)}
+.foot-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;max-width:var(--maxw);margin:0 auto}
+.foot-grid h4{font-family:var(--font-head);text-transform:uppercase;color:var(--gold);letter-spacing:1.5px;margin-bottom:12px;font-size:1rem}
+.foot-grid p,.foot-grid a{color:var(--muted);font-size:.94rem;line-height:1.9}
+.foot-grid a:hover{color:var(--cream)}
+.copyright{text-align:center;color:var(--muted);font-size:.85rem;margin-top:34px;border-top:1px solid var(--line);padding-top:20px}
+
+/* reviews */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.quote{background:#211c17;border:1px solid var(--line);border-radius:8px;padding:26px}
+.quote .stars{margin-bottom:10px}
+.quote p{font-style:italic;color:#e7dfce}
+.quote .who{margin-top:14px;font-family:var(--font-head);text-transform:uppercase;letter-spacing:1px;color:var(--gold);font-size:.9rem}
+.quote .meta-line{color:var(--muted);font-size:.8rem;margin-top:3px}
+
+/* rating summary */
+.rating-summary{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center;background:#211c17;border:1px solid var(--line);border-radius:10px;padding:36px 40px;max-width:760px;margin:0 auto}
+.rating-summary .score{text-align:center}
+.rating-summary .big{font-family:var(--font-head);font-size:4.5rem;line-height:1;color:var(--gold)}
+.rating-summary .score .stars{color:var(--gold);letter-spacing:2px;font-size:1.1rem;margin-top:4px}
+.rating-summary .count{color:var(--muted);font-size:.85rem;margin-top:8px}
+.rating-summary .bars{list-style:none;display:grid;gap:8px}
+.rating-summary .bars li{display:flex;align-items:center;gap:12px;font-size:.85rem;color:var(--muted)}
+.rating-summary .bars li span:first-child{width:34px;font-family:var(--font-head)}
+.rating-summary .bars .n{width:34px;text-align:right}
+.rating-summary .bar{flex:1;height:8px;background:rgba(245,239,226,.1);border-radius:6px;overflow:hidden}
+.rating-summary .bar i{display:block;height:100%;background:var(--gold)}
+@media(max-width:600px){.rating-summary{grid-template-columns:1fr;gap:24px;padding:28px 22px}}
+
+/* worst review callout */
+.worst{max-width:680px;margin:64px auto 0;text-align:center}
+.worst h2{font-size:clamp(1.7rem,4vw,2.4rem);text-transform:uppercase;margin:8px 0 12px}
+.worst .sub{color:var(--muted);font-size:.98rem;max-width:520px;margin:0 auto}
+.worst-card{background:#211c17;border:1px dashed var(--gold-2);border-radius:10px;padding:34px 30px;margin:26px auto;max-width:480px}
+.worst-card .stars2{font-size:1.5rem;letter-spacing:3px;color:var(--gold)}
+.worst-card .stars2 span{color:rgba(245,239,226,.2)}
+.worst-card .worst-text{font-family:var(--font-head);font-size:3.4rem;color:var(--cream);margin:14px 0 6px;line-height:1}
+.worst-card .who{color:var(--muted);font-size:.85rem;letter-spacing:.5px}
+
+@media(max-width:860px){
+  .cols-3,.cols-2,.quotes{grid-template-columns:1fr}
+  .split{grid-template-columns:1fr;gap:30px}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  nav.links{position:fixed;inset:62px 0 auto 0;flex-direction:column;background:var(--ink-2);padding:20px;border-bottom:1px solid var(--line);display:none}
+  nav.links.open{display:flex}
+  nav.links .btn{width:100%;text-align:center}
+  .nav-toggle{display:block}
+}

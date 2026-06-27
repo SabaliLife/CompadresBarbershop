@@ -38,13 +38,6 @@ header.site{position:sticky;top:0;z-index:50;background:rgba(20,18,16,.92);backd
 .logo .mark{width:44px;height:44px;border-radius:50%;border:2px solid var(--gold);display:grid;place-items:center;overflow:hidden;background:#000}
 .logo .mark img{width:100%;height:100%;object-fit:cover;display:block}
 .logo .mark.noimg::after{content:"C";font-family:var(--font-head);font-weight:700;color:var(--gold);font-size:1.2rem}
-
-/* hero logo badge */
-.hero-badge{width:130px;height:130px;border-radius:50%;border:3px solid var(--gold);object-fit:cover;display:block;margin:0 auto 24px;background:#000;box-shadow:0 10px 34px rgba(0,0,0,.55)}
-
-/* instagram feed */
-.ig-feed{display:flex;flex-wrap:wrap;gap:18px;justify-content:center}
-.ig-feed .instagram-media{margin:0 !important;min-width:300px !important;max-width:328px !important;width:100% !important}
 .logo .name{font-family:var(--font-head);font-size:1.25rem;text-transform:uppercase;letter-spacing:1.5px}
 .logo .name span{color:var(--gold)}
 nav.links{display:flex;align-items:center;gap:26px}
@@ -73,6 +66,14 @@ nav.links a:hover,nav.links a.active{opacity:1;color:var(--gold)}
 .rating{margin-top:26px;font-size:.95rem;color:var(--muted)}
 .rating strong{color:var(--cream)}
 
+/* hero logo badge */
+.hero-badge{width:130px;height:130px;border-radius:50%;border:3px solid var(--gold);object-fit:cover;display:block;margin:0 auto 24px;background:#000;box-shadow:0 10px 34px rgba(0,0,0,.55)}
+
+/* hero photo banner */
+.hero-photo{background:#0f0d0b;border-bottom:1px solid var(--line);text-align:center}
+.hero-photo img{width:100%;max-width:var(--maxw);height:auto;display:block;margin:0 auto}
+.hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;padding:28px 22px 6px}
+
 /* sections */
 section{padding:74px 0}
 .section-head{text-align:center;max-width:640px;margin:0 auto 46px}
@@ -98,11 +99,11 @@ section{padding:74px 0}
 .price-row .amt{font-family:var(--font-head);font-size:1.5rem;color:var(--gold);white-space:nowrap}
 .note{text-align:center;color:var(--muted);margin-top:30px;font-size:.95rem}
 
-/* gallery */
+/* gallery / photo grid */
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.gallery .tile{aspect-ratio:1/1;border-radius:8px;border:1px solid var(--line);display:grid;place-items:center;font-family:var(--font-head);text-transform:uppercase;letter-spacing:2px;color:rgba(245,239,226,.55);font-size:.85rem;text-align:center;padding:14px;
-  background:linear-gradient(135deg,#241e18,#17130f)}
-.gallery .tile .em{font-size:2.4rem;color:var(--gold);margin-bottom:8px}
+.gallery .shot{aspect-ratio:1/1;border-radius:8px;overflow:hidden;border:1px solid var(--line);display:block;background:#211c17}
+.gallery .shot img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.gallery .shot:hover img{transform:scale(1.06)}
 
 /* barbers */
 .barber{text-align:center}

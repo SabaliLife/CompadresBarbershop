@@ -142,7 +142,9 @@ footer.site{background:#0f0d0b;padding:48px 22px 30px;border-top:1px solid var(-
 .foot-grid h4{font-family:var(--font-head);text-transform:uppercase;color:var(--gold);letter-spacing:1.5px;margin-bottom:12px;font-size:1rem}
 .foot-grid p,.foot-grid a{color:var(--muted);font-size:.94rem;line-height:1.9}
 .foot-grid a:hover{color:var(--cream)}
-.copyright{text-align:center;color:var(--muted);font-size:.85rem;margin-top:34px;border-top:1px solid var(--line);padding-top:20px}
+.copyright{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:6px 16px;max-width:var(--maxw);margin:34px auto 0;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padding-top:20px}
+.copyright .credit a{color:var(--gold);border-bottom:1px solid var(--gold)}
+.copyright .credit a:hover{color:var(--cream)}
 
 /* reviews */
 .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
@@ -210,4 +212,5 @@ footer.site{background:#0f0d0b;padding:48px 22px 30px;border-top:1px solid var(-
   .worst-card{padding:28px 22px}
   .worst-card .worst-text{font-size:2.8rem}
   .gallery{gap:10px}
+  .copyright{justify-content:center;text-align:center}
 }

@@ -37,7 +37,10 @@ header.site{position:sticky;top:0;z-index:50;background:rgba(10,9,8,.95);backdro
 .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 46px}
 .logo{display:flex;align-items:center;gap:12px}
 .logo .mark{width:80px;height:80px;display:grid;place-items:center;flex:0 0 auto}
-.logo .mark img{width:100%;height:100%;object-fit:contain;display:block;mix-blend-mode:lighten}
+.logo .mark img{width:100%;height:100%;object-fit:contain;display:block;mix-blend-mode:lighten;cursor:zoom-in}
+.logobox{position:fixed;inset:0;z-index:200;background:rgba(5,4,3,.94);display:none;place-items:center;cursor:zoom-out;padding:24px}
+.logobox.open{display:grid}
+.logobox img{max-width:min(90vw,560px);max-height:90vh;width:auto;height:auto;mix-blend-mode:lighten}
 .logo .mark.noimg{width:44px;height:44px;border-radius:50%;border:2px solid var(--gold);background:#000}
 .logo .mark.noimg::after{content:"C";font-family:var(--font-head);font-weight:700;color:var(--gold);font-size:1.2rem}
 .logo .name{font-family:var(--font-head);font-size:1.25rem;text-transform:uppercase;letter-spacing:1.5px}

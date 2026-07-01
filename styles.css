@@ -1,7 +1,7 @@
 /* Compadres Barbershop — shared styles (mobile-optimized + photo gallery) */
 :root{
-  --ink:#141210;
-  --ink-2:#1f1b17;
+  --ink:#0a0908;
+  --ink-2:#16130f;
   --cream:#f5efe2;
   --gold:#d4a02a;
   --gold-2:#b9851a;
@@ -33,10 +33,10 @@ h1,h2,h3,.brand{font-family:var(--font-head);font-weight:700;letter-spacing:.5px
 .serape{height:3px;background:linear-gradient(90deg,transparent,var(--gold-2) 18%,var(--gold) 50%,var(--gold-2) 82%,transparent)}
 
 /* header */
-header.site{position:sticky;top:0;z-index:50;background:rgba(20,18,16,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.site{position:sticky;top:0;z-index:50;background:rgba(10,9,8,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 22px;max-width:var(--maxw);margin:0 auto}
 .logo{display:flex;align-items:center;gap:12px}
-.logo .mark{width:58px;height:58px;display:grid;place-items:center;flex:0 0 auto}
+.logo .mark{width:80px;height:80px;display:grid;place-items:center;flex:0 0 auto}
 .logo .mark img{width:100%;height:100%;object-fit:contain;display:block;mix-blend-mode:lighten}
 .logo .mark.noimg{width:44px;height:44px;border-radius:50%;border:2px solid var(--gold);background:#000}
 .logo .mark.noimg::after{content:"C";font-family:var(--font-head);font-weight:700;color:var(--gold);font-size:1.2rem}
@@ -72,7 +72,7 @@ nav.links a:hover,nav.links a.active{opacity:1;color:var(--gold)}
 .hero-badge{width:130px;height:130px;border-radius:50%;border:3px solid var(--gold);object-fit:cover;display:block;margin:0 auto 24px;background:#000;box-shadow:0 10px 34px rgba(0,0,0,.55)}
 
 /* hero photo banner */
-.hero-photo{background:#0f0d0b;border-bottom:1px solid var(--line);text-align:center}
+.hero-photo{background:#0a0908;border-bottom:1px solid var(--line);text-align:center}
 .hero-photo img{width:100%;max-width:var(--maxw);height:auto;display:block;margin:0 auto}
 .hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;padding:28px 22px 6px}
 
@@ -214,4 +214,5 @@ footer.site{background:#0f0d0b;padding:48px 22px 30px;border-top:1px solid var(-
   .worst-card .worst-text{font-size:2.8rem}
   .gallery{gap:10px}
   .copyright{justify-content:center;text-align:center}
+  .logo .mark{width:60px;height:60px}
 }

@@ -36,8 +36,9 @@ h1,h2,h3,.brand{font-family:var(--font-head);font-weight:700;letter-spacing:.5px
 header.site{position:sticky;top:0;z-index:50;background:rgba(20,18,16,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 22px;max-width:var(--maxw);margin:0 auto}
 .logo{display:flex;align-items:center;gap:12px}
-.logo .mark{width:44px;height:44px;border-radius:50%;border:2px solid var(--gold);display:grid;place-items:center;overflow:hidden;background:#000}
-.logo .mark img{width:100%;height:100%;object-fit:cover;display:block}
+.logo .mark{width:58px;height:58px;display:grid;place-items:center;flex:0 0 auto}
+.logo .mark img{width:100%;height:100%;object-fit:contain;display:block}
+.logo .mark.noimg{width:44px;height:44px;border-radius:50%;border:2px solid var(--gold);background:#000}
 .logo .mark.noimg::after{content:"C";font-family:var(--font-head);font-weight:700;color:var(--gold);font-size:1.2rem}
 .logo .name{font-family:var(--font-head);font-size:1.25rem;text-transform:uppercase;letter-spacing:1.5px}
 .logo .name span{color:var(--gold)}

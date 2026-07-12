@@ -57,13 +57,13 @@
     <!-- BEFORE = cut1  |  AFTER = cut2 -->
     <div class="ba">
       <figure class="before" onclick="openShot(this.querySelector('img').src)">
-        <img src="cut1.jpg" alt="Client before the cut — grown out, shaggy hair" loading="lazy"
-             onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.src.replace(/\.jpg$/,'.png');}else{this.closest('figure').style.display='none';}">
+        <img src="Cut1.png" alt="Client before the cut — grown out, shaggy hair" loading="lazy"
+             onerror="this.closest('figure').style.display='none';">
         <figcaption>Before</figcaption>
       </figure>
       <figure class="after" onclick="openShot(this.querySelector('img').src)">
-        <img src="cut2.jpg" alt="Client after — textured crop with a clean low taper by Martin" loading="lazy"
-             onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.src.replace(/\.jpg$/,'.png');}else{this.closest('figure').style.display='none';}">
+        <img src="Cut2.png" alt="Client after — textured crop with a clean low taper by Martin" loading="lazy"
+             onerror="this.closest('figure').style.display='none';">
         <figcaption>After</figcaption>
       </figure>
     </div>
@@ -85,8 +85,8 @@
     <div class="works">
       <a class="work" onclick="openShot(this.querySelector('img').src)">
         <span class="badge">Client Fave</span>
-        <img src="cut3.jpg" alt="Spiky textured top with a clean mid fade by Martin at Compadres Barbershop" loading="lazy"
-             onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.src.replace(/\.jpg$/,'.png');}else{this.closest('.work').style.display='none';}">
+        <img src="Cut3.png" alt="Spiky textured top with a clean mid fade by Martin at Compadres Barbershop" loading="lazy"
+             onerror="this.closest('.work').style.display='none';">
         <span class="cap"><h3>Spiked Texture</h3><span>Mid Fade · Martin</span></span>
       </a>
     </div>

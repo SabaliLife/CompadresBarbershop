@@ -85,6 +85,9 @@ nav.links a:hover,nav.links a.active{opacity:1;color:var(--gold)}
 /* hero photo banner */
 .hero-photo{background:#0a0908;border-bottom:1px solid var(--line);text-align:center}
 .hero-photo img{width:100%;max-width:var(--maxw);height:auto;display:block;margin:0 auto}
+.hero-slides{position:relative;display:block;max-width:var(--maxw);margin:0 auto;aspect-ratio:3/2;overflow:hidden}
+.hero-slides .slide{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity 1.4s ease}
+.hero-slides .slide.on{opacity:1}
 .hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;padding:28px 22px 6px}
 
 /* sections */

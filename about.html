@@ -64,6 +64,10 @@
         <p style="margin-bottom:0">🪙 Cash &amp; card accepted</p>
       </div>
     </div>
+    <figure class="shopshot" onclick="openShot(this.querySelector('img').src)">
+      <img src="CompadresBarbershopHero.png" alt="Inside Compadres Barbershop — vintage chairs, round mirrors, and the shop wall" loading="lazy">
+      <figcaption>Step inside — 9206 S. Avenida Del Yaqui, Suite 3, Guadalupe</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -102,7 +106,12 @@
   </div>
   <div class="copyright"><span>© 2026 Compadres Barbershop · Guadalupe, AZ · Rated 5.0 ★</span><span class="credit">Leveled up by <a href="https://www.precisiongrowthpartnersaz.com" target="_blank" rel="noopener">Precision Growth Partners</a></span></div>
 </footer>
+<div class="shotbox" id="shotbox" onclick="this.classList.remove('open')"><img src="" alt="Inside Compadres Barbershop"></div>
 <div class="logobox" id="logobox" onclick="this.classList.remove('open')"><img src="logo.png" alt="Compadres Barbershop logo"></div>
+<script>
+function openShot(src){var b=document.getElementById('shotbox');b.querySelector('img').src=src;b.classList.add('open');}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.getElementById('shotbox').classList.remove('open');document.getElementById('logobox').classList.remove('open');}});
+</script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

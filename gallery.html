@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<!-- Compadres Barbershop gallery — photo-grid version (cut1.jpg–cut6.jpg) -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gallery | Compadres Barbershop</title>
-<meta name="description" content="See the work — fades, cuts, and beard styling from Compadres Barbershop in Guadalupe, AZ.">
+<title>Martin's Work | Compadres Barbershop</title>
+<meta name="description" content="Fresh cuts from Martin's chair at Compadres Barbershop in Guadalupe, AZ — before and afters, fades, tapers, and textured styles.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -40,34 +39,73 @@
   </div>
 </header>
 
-<section class="hero" style="padding:90px 22px 70px">
+<section class="hero" style="padding:90px 22px 60px">
   <div class="container">
-    <p class="eyebrow">The Work</p>
-    <h1>The <em>Gallery</em></h1>
-    <p class="lead">Clean fades, classic cuts, and crisp beard work. A look at what comes out of our chairs.</p>
+    <p class="eyebrow">Straight From The Chair</p>
+    <h1>Martin's <em>Work</em></h1>
+    <p class="lead">Real clients, real transformations. Tap any photo to see it full size.</p>
   </div>
 </section>
 
-<section>
+<section style="padding-top:40px">
   <div class="container">
-    <div class="gallery">
-      <a class="shot" href="https://www.instagram.com/compadresbarbershop/" target="_blank" rel="noopener"><img src="cut1.jpg" alt="Fresh cut at Compadres Barbershop" loading="lazy" onerror="this.closest('.shot').style.display='none'"></a>
-      <a class="shot" href="https://www.instagram.com/compadresbarbershop/" target="_blank" rel="noopener"><img src="cut2.jpg" alt="Fade by Compadres Barbershop" loading="lazy" onerror="this.closest('.shot').style.display='none'"></a>
-      <a class="shot" href="https://www.instagram.com/compadresbarbershop/" target="_blank" rel="noopener"><img src="cut3.jpg" alt="Haircut at Compadres Barbershop" loading="lazy" onerror="this.closest('.shot').style.display='none'"></a>
-      <a class="shot" href="https://www.instagram.com/compadresbarbershop/" target="_blank" rel="noopener"><img src="cut4.jpg" alt="Beard and cut at Compadres Barbershop" loading="lazy" onerror="this.closest('.shot').style.display='none'"></a>
-      <a class="shot" href="https://www.instagram.com/compadresbarbershop/" target="_blank" rel="noopener"><img src="cut5.jpg" alt="Style by Compadres Barbershop" loading="lazy" onerror="this.closest('.shot').style.display='none'"></a>
-      <a class="shot" href="https://www.instagram.com/compadresbarbershop/" target="_blank" rel="noopener"><img src="cut6.jpg" alt="Fresh look at Compadres Barbershop" loading="lazy" onerror="this.closest('.shot').style.display='none'"></a>
+    <div class="section-head">
+      <p class="eyebrow">The Transformation</p>
+      <h2>Before &amp; after</h2>
     </div>
-    <p class="note">Tap any photo to see more on our Instagram.</p>
-    <div style="text-align:center;margin-top:24px">
-      <a class="btn btn-gold" href="https://www.instagram.com/compadresbarbershop/" target="_blank" rel="noopener">Follow @compadresbarbershop</a>
+
+    <!-- BEFORE = cut1  |  AFTER = cut2 -->
+    <div class="ba">
+      <figure class="before" onclick="openShot(this.querySelector('img').src)">
+        <img src="cut1.jpg" alt="Client before the cut — grown out, shaggy hair" loading="lazy"
+             onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.src.replace(/\.jpg$/,'.png');}else{this.closest('figure').style.display='none';}">
+        <figcaption>Before</figcaption>
+      </figure>
+      <figure class="after" onclick="openShot(this.querySelector('img').src)">
+        <img src="cut2.jpg" alt="Client after — textured crop with a clean low taper by Martin" loading="lazy"
+             onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.src.replace(/\.jpg$/,'.png');}else{this.closest('figure').style.display='none';}">
+        <figcaption>After</figcaption>
+      </figure>
+    </div>
+    <p class="ba-note">Textured crop with a clean low taper — cut by Martin.</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">More From The Chair</p>
+      <h2>Fresh cuts</h2>
+    </div>
+
+    <!-- TO ADD A NEW PHOTO: copy one <a class="work"> block, bump the file name
+         (cut4, cut5, cut6 ...), drop the image in this same folder, update the cut
+         name. Either .jpg or .png works. -->
+
+    <div class="works">
+      <a class="work" onclick="openShot(this.querySelector('img').src)">
+        <span class="badge">Client Fave</span>
+        <img src="cut3.jpg" alt="Spiky textured top with a clean mid fade by Martin at Compadres Barbershop" loading="lazy"
+             onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.src.replace(/\.jpg$/,'.png');}else{this.closest('.work').style.display='none';}">
+        <span class="cap"><h3>Spiked Texture</h3><span>Mid Fade · Martin</span></span>
+      </a>
+    </div>
+
+    <div class="shout">
+      <p>"Always taking care of us and making sure we look fresh."</p>
+      <div class="who">— A Compadres Regular</div>
+    </div>
+
+    <p class="note">More cuts added all the time — follow along on Instagram.</p>
+    <div style="text-align:center;margin-top:22px">
+      <a class="btn btn-ghost" href="https://www.instagram.com/compadresbarbershop/" target="_blank" rel="noopener">Follow @compadresbarbershop</a>
     </div>
   </div>
 </section>
 
 <div class="cta-band">
-  <h2>Your next cut starts here</h2>
-  <p>Book a chair and let's get you looking fresh.</p>
+  <h2>Want a cut like this?</h2>
+  <p>Book with Martin and get in the chair.</p>
   <a class="btn btn-gold" href="https://booksy.com/en-us/102280_compadres-barbershop_barber-shop_14724_tempe" target="_blank" rel="noopener">Book Now</a>
 </div>
 
@@ -80,7 +118,13 @@
   </div>
   <div class="copyright"><span>© 2026 Compadres Barbershop · Guadalupe, AZ · Rated 5.0 ★</span><span class="credit">Leveled up by <a href="https://www.precisiongrowthpartnersaz.com" target="_blank" rel="noopener">Precision Growth Partners</a></span></div>
 </footer>
+
+<div class="shotbox" id="shotbox" onclick="this.classList.remove('open')"><img src="" alt="Haircut by Martin at Compadres Barbershop"></div>
 <div class="logobox" id="logobox" onclick="this.classList.remove('open')"><img src="logo.png" alt="Compadres Barbershop logo"></div>
+<script>
+function openShot(src){var b=document.getElementById('shotbox');b.querySelector('img').src=src;b.classList.add('open');}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.getElementById('shotbox').classList.remove('open');document.getElementById('logobox').classList.remove('open');}});
+</script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

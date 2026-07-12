@@ -111,11 +111,35 @@ section{padding:74px 0}
 .price-row .amt{font-family:var(--font-head);font-size:1.5rem;color:var(--gold);white-space:nowrap}
 .note{text-align:center;color:var(--muted);margin-top:30px;font-size:.95rem}
 
-/* gallery / photo grid */
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.gallery .shot{aspect-ratio:1/1;border-radius:8px;overflow:hidden;border:1px solid var(--line);display:block;background:#211c17}
-.gallery .shot img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
-.gallery .shot:hover img{transform:scale(1.06)}
+/* work gallery — masonry */
+.works{column-count:3;column-gap:16px}
+.work{break-inside:avoid;margin:0 0 16px;position:relative;display:block;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#16130f;cursor:zoom-in}
+.work img{width:100%;display:block;transition:transform .5s ease}
+.work:hover img{transform:scale(1.04)}
+.work .cap{position:absolute;left:0;right:0;bottom:0;padding:16px 16px 14px;background:linear-gradient(to top,rgba(0,0,0,.9),rgba(0,0,0,.5) 55%,transparent)}
+.work .cap h3{font-size:1.02rem;text-transform:uppercase;letter-spacing:1px;color:var(--cream)}
+.work .cap span{display:block;margin-top:3px;color:var(--gold);font-family:var(--font-head);font-size:.76rem;letter-spacing:2px;text-transform:uppercase}
+.work .badge{position:absolute;top:12px;left:12px;background:var(--gold);color:var(--ink);font-family:var(--font-head);font-size:.68rem;letter-spacing:1.5px;text-transform:uppercase;padding:5px 10px;border-radius:3px}
+
+/* before / after */
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:860px;margin:0 auto}
+.ba figure{position:relative;margin:0;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#16130f;cursor:zoom-in}
+.ba img{width:100%;display:block;transition:transform .5s ease}
+.ba figure:hover img{transform:scale(1.03)}
+.ba figcaption{position:absolute;top:12px;left:12px;font-family:var(--font-head);text-transform:uppercase;letter-spacing:2px;font-size:.72rem;padding:6px 12px;border-radius:3px}
+.ba .before figcaption{background:rgba(10,9,8,.88);color:var(--muted);border:1px solid var(--line)}
+.ba .after figcaption{background:var(--gold);color:var(--ink)}
+.ba-note{text-align:center;color:var(--muted);font-size:.92rem;margin-top:16px}
+
+/* photo lightbox */
+.shotbox{position:fixed;inset:0;z-index:200;background:rgba(5,4,3,.95);display:none;place-items:center;cursor:zoom-out;padding:20px}
+.shotbox.open{display:grid}
+.shotbox img{max-width:92vw;max-height:88vh;border-radius:8px;border:1px solid var(--line)}
+
+/* client shout-out */
+.shout{max-width:640px;margin:54px auto 0;text-align:center;border-top:1px solid var(--line);padding-top:34px}
+.shout p{font-style:italic;color:#e7dfce;font-size:1.15rem}
+.shout .who{margin-top:12px;font-family:var(--font-head);text-transform:uppercase;letter-spacing:2px;color:var(--gold);font-size:.85rem}
 
 /* barbers */
 .barber{text-align:center}
@@ -192,7 +216,7 @@ footer.site{background:#0f0d0b;padding:48px 22px 30px;border-top:1px solid var(-
 @media(max-width:860px){
   .cols-3,.cols-2,.quotes{grid-template-columns:1fr}
   .split{grid-template-columns:1fr;gap:30px}
-  .gallery{grid-template-columns:repeat(2,1fr)}
+  .works{column-count:2}
   nav.links{position:fixed;inset:70px 0 auto 0;flex-direction:column;background:var(--ink-2);padding:18px 22px 22px;border-bottom:1px solid var(--line);display:none;gap:4px}
   nav.links a{padding:12px 4px;border-bottom:1px solid var(--line);width:100%}
   nav.links.open{display:flex}
@@ -222,7 +246,7 @@ footer.site{background:#0f0d0b;padding:48px 22px 30px;border-top:1px solid var(-
   .foot-grid{flex-direction:column;gap:24px}
   .worst-card{padding:28px 22px}
   .worst-card .worst-text{font-size:2.8rem}
-  .gallery{gap:10px}
+  .works{column-count:1}
   .copyright{justify-content:center;text-align:center}
   .logo .mark{width:60px;height:60px}
 }

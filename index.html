@@ -59,17 +59,17 @@
     </div>
     <div class="grid cols-3">
       <div class="card">
-        <div class="icon"><img src="mastercraft.png" alt="Gold scissors and straight razor"></div>
+        <div class="icon"><img src="mastercraft.png" class="blend" alt="Gold scissors and straight razor" loading="lazy" onclick="openShot(this.src)"></div>
         <h3>Master Craft</h3>
         <p>Precision fades, classic cuts, and detailed beard shaping from barbers who take pride in every line.</p>
       </div>
       <div class="card">
-        <div class="icon"><img src="realhospitality.png" alt="Classic barber pole"></div>
+        <div class="icon"><img src="realhospitality.png" class="blend" alt="Classic barber pole" loading="lazy" onclick="openShot(this.src)"></div>
         <h3>Real Hospitality</h3>
         <p>No rush, no attitude. Just good conversation and a fresh cut. As the regulars say — IYKYK.</p>
       </div>
       <div class="card">
-        <div class="icon"><img src="easybooking.png" alt="Phone booking app with calendar and clock"></div>
+        <div class="icon"><img src="easybooking.png" class="blend" alt="Phone booking app with calendar and clock" loading="lazy" onclick="openShot(this.src)"></div>
         <h3>Easy Booking</h3>
         <p>Reserve your chair in seconds through Booksy. Pick your barber, your time, and walk in ready.</p>
       </div>
@@ -168,7 +168,12 @@
   </div>
   <div class="copyright"><span>© 2026 Compadres Barbershop · Guadalupe, AZ · Rated 5.0 ★</span><span class="credit">Leveled up by <a href="https://www.precisiongrowthpartnersaz.com" target="_blank" rel="noopener">Precision Growth Partners</a></span></div>
 </footer>
+<div class="shotbox" id="shotbox" onclick="this.classList.remove('open')"><img src="" alt="Compadres Barbershop feature image"></div>
 <div class="logobox" id="logobox" onclick="this.classList.remove('open')"><img src="logo.png" alt="Compadres Barbershop logo"></div>
+<script>
+function openShot(src){var b=document.getElementById('shotbox');b.querySelector('img').src=src;b.classList.add('open');}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.getElementById('shotbox').classList.remove('open');document.getElementById('logobox').classList.remove('open');}});
+</script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

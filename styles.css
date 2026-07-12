@@ -43,9 +43,10 @@ header.site{position:sticky;top:0;z-index:50;background:rgba(10,9,8,.95);backdro
 .logobox img{max-width:min(90vw,560px);max-height:90vh;width:auto;height:auto;mix-blend-mode:lighten}
 
 /* intro splash (home only) */
-.splash{position:fixed;inset:0;z-index:300;background:#0a0908;display:grid;place-items:center;padding:24px;animation:splashout .7s ease 2.5s forwards}
-.splash img{max-width:min(88vw,520px);max-height:86vh;mix-blend-mode:lighten;animation:splashin 1s ease both}
-@keyframes splashin{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
+.splash{position:fixed;inset:0;z-index:300;background:#0a0908;display:grid;place-items:center;padding:24px;cursor:pointer;animation:splashout .6s ease 3s forwards}
+.splash.skip{animation:splashout .3s ease forwards}
+.splash img{max-width:min(88vw,520px);max-height:86vh;mix-blend-mode:lighten;animation:splashin .5s ease both}
+@keyframes splashin{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
 @keyframes splashout{to{opacity:0;visibility:hidden}}
 @media(prefers-reduced-motion:reduce){.splash{display:none}}
 .logo .mark.noimg{width:44px;height:44px;border-radius:50%;border:2px solid var(--gold);background:#000}

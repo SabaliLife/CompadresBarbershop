@@ -114,6 +114,14 @@ section{padding:74px 0}
 .shopshot img{width:100%;display:block}
 .shopshot figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 18px 14px;background:linear-gradient(transparent,rgba(5,4,3,.85));color:#e7dfce;font-size:.9rem}
 
+/* faq (contact) */
+.faq{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.faq .qa{background:#211c17;border:1px solid var(--line);border-radius:8px;padding:24px}
+.faq .qa h3{font-size:1.05rem;text-transform:uppercase;letter-spacing:.5px;color:var(--gold);margin-bottom:10px}
+.faq .qa p{color:var(--muted)}
+.faq .qa a{color:var(--gold)}
+@media(max-width:820px){.faq{grid-template-columns:1fr}}
+
 /* services / price list */
 .pricelist{max-width:760px;margin:0 auto;display:grid;gap:6px}
 .price-row{display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding:20px 4px;border-bottom:1px dashed var(--line)}
